@@ -1,0 +1,9 @@
+{
+  "/watchlist/page": "app/watchlist/page.js",
+  "/home/page": "app/home/page.js",
+  "/movie/john-wick/page": "app/movie/john-wick/page.js",
+  "/movie/[id]/page": "app/movie/[id]/page.js",
+  "/profile/page": "app/profile/page.js",
+  "/search/page": "app/search/page.js",
+  "/login/page": "app/login/page.js"
+}

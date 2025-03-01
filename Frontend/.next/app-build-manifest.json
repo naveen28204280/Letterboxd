@@ -1,0 +1,69 @@
+{
+  "pages": {
+    "/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/layout.js"
+    ],
+    "/watchlist/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/watchlist/page.css",
+      "static/chunks/app/watchlist/page.js"
+    ],
+    "/movie/[id]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/movie/[id]/page.css",
+      "static/chunks/app/movie/[id]/page.js"
+    ],
+    "/home/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/home/page.css",
+      "static/chunks/app/home/page.js"
+    ],
+    "/profile/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/profile/page.css",
+      "static/chunks/app/profile/page.js"
+    ],
+    "/login/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/login/page.css",
+      "static/chunks/app/login/page.js"
+    ],
+    "/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/page.css",
+      "static/chunks/app/page.js"
+    ],
+    "/register/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/register/page.css",
+      "static/chunks/app/register/page.js"
+    ],
+    "/search/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/search/page.css",
+      "static/chunks/app/search/page.js"
+    ],
+    "/movie/interstellar/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/movie/interstellar/page.css",
+      "static/chunks/app/movie/interstellar/page.js"
+    ],
+    "/movie/john-wick/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/movie/john-wick/page.css",
+      "static/chunks/app/movie/john-wick/page.js"
+    ]
+  }
+}

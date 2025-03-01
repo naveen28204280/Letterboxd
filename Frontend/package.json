@@ -1,0 +1,19 @@
+{
+  "name": "letterboxd",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@conform-to/react": "^1.2.2",
+    "@conform-to/zod": "^1.2.2",
+    "next": "^15.1.7",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "zod": "^3.24.1"
+  }
+}
