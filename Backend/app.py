@@ -11,7 +11,7 @@ from mysql.connector import Error
 app = Flask(__name__)
 CORS(app)
 bcrypt=Bcrypt(app)
-API_KEY='3118684b1e96eca15dacb29db9f4ca95'
+API_KEY=os.get.env(API_KEY)
 USER_DATA_FILE = os.path.join(os.path.dirname(__file__), "users.json")
 
 DB_CONFIG = {
