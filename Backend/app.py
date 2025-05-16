@@ -6,18 +6,18 @@ from flask_bcrypt import Bcrypt
 import requests
 from mysql.connector import Error
 import pymysql
-from mysql.connector import Error
+
 
 app = Flask(__name__)
 CORS(app)
 bcrypt=Bcrypt(app)
-API_KEY='3118684b1e96eca15dacb29db9f4ca95'
+API_KEY=os.getenv("TMDB_API_KEY")
 USER_DATA_FILE = os.path.join(os.path.dirname(__file__), "users.json")
 
 DB_CONFIG = {
     'host': 'localhost',
     'user': 'root',
-    'password': 'your_password',
+    'password': '',
     'database': 'Letterboxd',
     'port': 3306,
     'cursorclass': pymysql.cursors.DictCursor
@@ -58,6 +58,7 @@ def register():
     }
     users.append(new_user)
     save_users(users)
+    
 
     return jsonify({
         "message": "User registered successfully",
@@ -123,10 +124,9 @@ def update():
 
 @app.route("/api/top-rated-movies", methods=["GET"])
 def get_top_rated_movies():
-    url = f"https://api.themoviedb.org/3/movie/top_rated?api_key={API_KEY}&language=en-US&page=1"
+    url = f"https://api.themoviedb.org/3/movie/top_rated?rg={API_KEY}&language=en-US&page=1"
     response = requests.get(url)
     response.raise_for_status()
-
     movies = response.json().get("results", [])
     formatted_movies = [
         {
@@ -219,8 +219,7 @@ def add_to_watchlist():
 
 @app.route("/api/watchlist/remove", methods=["POST"])
 def remove_from_watchlist():
-    data = request.json
-    print(data)
+    data = request.jsond
     if not all(key in data for key in ["username", "movieId"]):
         return jsonify({"error": "Missing required fields"}), 400
     username = data["username"]
@@ -281,7 +280,7 @@ def movie_details(id):
         movie_title = movies.get("title")
         movie_overview = movies.get("overview")
         poster_path = movies.get("poster_path")
-        poster_url = f"https://image.tmdb.org/t/p/w500{poster_path}"
+        poster_url = f'https://image.tmdb.org/t/p/w500{poster_path}'
         return jsonify({
             "id": movie_id,
             "title": movie_title,
